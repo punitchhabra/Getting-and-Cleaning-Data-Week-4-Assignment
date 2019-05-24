@@ -28,7 +28,7 @@
 
   <meta name="viewport" content="width=device-width">
   
-  <title>Getting-and-Cleaning-Data-Week-4-Assignment/README.md at master · gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment</title>
+  <title>Getting-and-Cleaning-Data-Week-4-Assignment/run_analysis.R at master · gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment</title>
     <meta name="description" content="Contribute to gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment development by creating an account on GitHub.">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
@@ -38,10 +38,10 @@
     <meta property="og:image" content="https://avatars2.githubusercontent.com/u/11233834?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment" /><meta property="og:url" content="https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment" /><meta property="og:description" content="Contribute to gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment development by creating an account on GitHub." />
 
   <link rel="assets" href="https://github.githubassets.com/">
-  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6NDAyODY3NjAzOjc0NzZlMjAyYmFmODE2NGRjYmI1YzRhMjIwNTAxODc4ZGVlYmUxY2FjNGNlZDI3ODNkMDMyNjUyOTdlODc1NDE=--fab470d57f8f7c7a2a3f886d9f9afff4edc305c9">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6NDAyODY3NjAzOmFiMzg1N2EyZTU2YjlmNmY0Mjc0ZTllN2QwMGI1MDJiYzk1YjQ1YmFhNTcyZTc5NTg0MDk2Yjc5YjlhYTI3ZmM=--59180ea10a7127c26e1035d9bb72e9917c2d8583">
   <meta name="pjax-timeout" content="1000">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
-  <meta name="request-id" content="CAA3:0380:1D949E:2B3D86:5CE79191" data-pjax-transient>
+  <meta name="request-id" content="CAA3:0380:1D9394:2B34BA:5CE7916C" data-pjax-transient>
 
 
   
@@ -52,7 +52,7 @@
     <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
     <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
 
-  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="CAA3:0380:1D949E:2B3D86:5CE79191" /><meta name="octolytics-dimension-region_edge" content="ap-south-1" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="49216212" /><meta name="octolytics-actor-login" content="punitchhabra" /><meta name="octolytics-actor-hash" content="cf7eb823490299555b09059775864485162c8a9d3c56afdc57c5f45ec6c46a8f" />
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="CAA3:0380:1D9394:2B34BA:5CE7916C" /><meta name="octolytics-dimension-region_edge" content="ap-south-1" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="49216212" /><meta name="octolytics-actor-login" content="punitchhabra" /><meta name="octolytics-actor-hash" content="cf7eb823490299555b09059775864485162c8a9d3c56afdc57c5f45ec6c46a8f" />
 <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
 
 
@@ -71,7 +71,7 @@
     <meta name="user-login" content="punitchhabra">
 
       <meta name="expected-hostname" content="github.com">
-    <meta name="js-proxy-site-detection-payload" content="MmRlMTZhMThlYjJjNmVkZmZjZjYwMGIzMDI5Y2UxMjk3ZGExODc3NjNhNWJiZGJjYjM4OGEzNzI5OGVkZWYzZnx7InJlbW90ZV9hZGRyZXNzIjoiMjIzLjE5MC4yOC4yNyIsInJlcXVlc3RfaWQiOiJDQUEzOjAzODA6MUQ5NDlFOjJCM0Q4Njo1Q0U3OTE5MSIsInRpbWVzdGFtcCI6MTU1ODY3OTk1OCwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
+    <meta name="js-proxy-site-detection-payload" content="MmMyOTRmNWM3MjhhMWE2ZmQ0NjFiMzVmNzcyOGExNDA1OWYxNGVmNmRiZmUyNDc3MTgzNTk4OTdiYzdkNGZkY3x7InJlbW90ZV9hZGRyZXNzIjoiMjIzLjE5MC4yOC4yNyIsInJlcXVlc3RfaWQiOiJDQUEzOjAzODA6MUQ5Mzk0OjJCMzRCQTo1Q0U3OTE2QyIsInRpbWVzdGFtcCI6MTU1ODY3OTk1MywiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
 
     <meta name="enabled-features" content="SPONSORS,UNIVERSE_BANNER,MARKETPLACE_INVOICED_BILLING,MARKETPLACE_SOCIAL_PROOF_CUSTOMERS,MARKETPLACE_TRENDING_SOCIAL_PROOF,MARKETPLACE_RECOMMENDATIONS,NOTIFY_ON_BLOCK,RELATED_ISSUES">
 
@@ -87,7 +87,7 @@
   <meta name="octolytics-dimension-user_id" content="11233834" /><meta name="octolytics-dimension-user_login" content="gangxu79" /><meta name="octolytics-dimension-repository_id" content="59238098" /><meta name="octolytics-dimension-repository_nwo" content="gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="59238098" /><meta name="octolytics-dimension-repository_network_root_nwo" content="gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
 
 
-    <link rel="canonical" href="https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/blob/master/README.md" data-pjax-transient>
+    <link rel="canonical" href="https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/blob/master/run_analysis.R" data-pjax-transient>
 
 
   <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
@@ -157,7 +157,7 @@
           aria-autocomplete="list"
           aria-controls="jump-to-results"
           aria-label="Search or jump to…"
-          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=tl2nSo87K2yxz2vkvf3qw1NSRKeMVm57i6QdUnsWIOdNCtvEGGQ/uqu4G0bpYIY9pDe+9U1ChCqIGxvVzFBw0Q=="
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=NmirWL+R1L7Y0XlYRHQzAcjP+eBOdQdfapCT0nA8XjTNP9fWKM7AaMKmCfoQ6V//P6oDso9h7Q5pL5VVx3oOAg=="
           spellcheck="false"
           autocomplete="off"
           >
@@ -307,7 +307,7 @@
       <img class="avatar" src="https://avatars0.githubusercontent.com/u/49216212?s=40&amp;v=4" width="20" height="20" alt="@punitchhabra" />
       punitchhabra
 </a>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ZcLOse1SMhUMYhVAttGGU/rJL0mEM92CDrNrHbh4Ql5maWc+OYp9a1QPauB8W1MbHAzrVsdNJbTlYqdohKqqcg==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="jPzfYW3/x3AOMk0RAv0YJXMGCZc4gonn3I31ptwl4jGPV3buuSeIDlZfMrHId81tlcPNiHv8cdE3XDnT4PcKHQ==" />
       <button type="submit" class="Header-link mr-0 mr-lg-3 py-2 py-lg-0 border-top border-lg-top-0 border-white-fade-15 d-lg-none btn-link d-block width-full text-left" data-ga-click="Header, sign out, icon:logout" style="padding-left: 2px;">
         <svg class="octicon octicon-sign-out v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9V7H8V5h4V3l4 3-4 3zm-2 3H6V3L2 1h8v3h1V1c0-.55-.45-1-1-1H1C.45 0 0 .45 0 1v11.38c0 .39.22.73.55.91L6 16.01V13h4c.55 0 1-.45 1-1V8h-1v4z"/></svg>
         Sign out
@@ -400,7 +400,7 @@
     border
   " data-team-hovercards-enabled>
   <details class="js-user-status-details details-reset details-overlay details-overlay-dark">
-    <summary class="btn-link btn-block link-gray no-underline js-toggle-user-status-edit toggle-user-status-edit " aria-haspopup="dialog" role="menuitem" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:11233834,&quot;target&quot;:&quot;EDIT_USER_STATUS&quot;,&quot;user_id&quot;:49216212,&quot;client_id&quot;:&quot;1722752578.1554023930&quot;,&quot;originating_request_id&quot;:&quot;CAA3:0380:1D949E:2B3D86:5CE79191&quot;,&quot;originating_url&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/blob/master/README.md&quot;,&quot;referrer&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment&quot;}}" data-hydro-click-hmac="616344f495793db9bc360353babc9919ebc379e2b2d6784a07dea9348d5e430b">
+    <summary class="btn-link btn-block link-gray no-underline js-toggle-user-status-edit toggle-user-status-edit " aria-haspopup="dialog" role="menuitem" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:11233834,&quot;target&quot;:&quot;EDIT_USER_STATUS&quot;,&quot;user_id&quot;:49216212,&quot;client_id&quot;:&quot;1722752578.1554023930&quot;,&quot;originating_request_id&quot;:&quot;CAA3:0380:1D9394:2B34BA:5CE7916C&quot;,&quot;originating_url&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/blob/master/run_analysis.R&quot;,&quot;referrer&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment&quot;}}" data-hydro-click-hmac="02f0e52271e1113165e0432b40c7c080e4eeb9d8b5136d206560e6cb31add80e">
       <div class="d-flex">
         <div class="f6 lh-condensed user-status-header
           d-inline-block v-align-middle
@@ -426,7 +426,7 @@
         </div>
       </div>
 </summary>    <details-dialog class="details-dialog rounded-1 anim-fade-in fast Box Box--overlay" role="dialog" tabindex="-1">
-      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="position-relative flex-auto js-user-status-form" action="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="r5ixQ43PeM0K7nN70ue2/mbuDwVkUm0q+4ya53c1xqeQ0upXNjRn5OCIzhinBONPyR0VqkPEc1XjqCxtso+rXw==" />
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="position-relative flex-auto js-user-status-form" action="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="rAOE9jyzTv9HMQHQStJ8e8F4ZvIuAb+Q9fK6xOaoQR6TSd/ih0hR1q1XvLM/MSnKbot8XQmXoe/t1gxOIxIs5g==" />
         <div class="Box-header bg-gray border-bottom p-3">
           <button class="Box-btn-octicon js-toggle-user-status-edit btn-octicon float-right" type="reset" aria-label="Close dialog" data-close-dialog>
             <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
@@ -546,17 +546,17 @@
       </li>
       <li class="dropdown-divider" role="none"></li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 30 minutes" value="2019-05-24T12:39:18+05:30">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 30 minutes" value="2019-05-24T12:39:13+05:30">
             in 30 minutes
           </button>
         </li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 1 hour" value="2019-05-24T13:09:18+05:30">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 1 hour" value="2019-05-24T13:09:13+05:30">
             in 1 hour
           </button>
         </li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 4 hours" value="2019-05-24T16:09:18+05:30">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 4 hours" value="2019-05-24T16:09:13+05:30">
             in 4 hours
           </button>
         </li>
@@ -604,7 +604,7 @@
     <div role="none" class="dropdown-divider"></div>
     <a role="menuitem" class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a>
     <a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="zO/rBCb0sChYO9+YnBJQ2yxI3WcCVBaqkbuqhQHnp17PREKL8iz/VgBWoDhWmIWTyo0ZeEEq7px6ambwPTVPcg==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="3CO25sLJbiJ5TquLLv/01v6aIawiIsWmh8fV8FaLAY/fiB9pFhEhXCEj1CvkdSGeGF/ls2FcPZBsFhmFalnpow==" />
       
       <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
         Sign out
@@ -652,10 +652,10 @@
 
   <li>
     
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="clearfix js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="aXZ4PYwfotEW+D0awoli73ltVHrTFTFDG7T2pghx2q31NsQUb7NxZYqK+BP2z/IYMQaR5Cb16Imvvb+Ig7eQPw==" />      <input type="hidden" name="repository_id" value="59238098">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="clearfix js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="0gR3mbxmfv4VQ3tChYhh5Lr28zboFyWAbJvU+gFYKNBORMuwX8qtSokxvkuxzvET8p02qB33/ErYkp3Uip5iQg==" />      <input type="hidden" name="repository_id" value="59238098">
 
       <details class="details-reset details-overlay select-menu float-left">
-        <summary class="select-menu-button float-left btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:59238098,&quot;client_id&quot;:&quot;1722752578.1554023930&quot;,&quot;originating_request_id&quot;:&quot;CAA3:0380:1D949E:2B3D86:5CE79191&quot;,&quot;originating_url&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/blob/master/README.md&quot;,&quot;referrer&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment&quot;,&quot;user_id&quot;:49216212}}" data-hydro-click-hmac="3ee3fe48b8bab1c1bd4674fbf558567976630072db591b5821b2c8ae4f5a420d" data-ga-click="Repository, click Watch settings, action:blob#show">          <span data-menu-button>
+        <summary class="select-menu-button float-left btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:59238098,&quot;client_id&quot;:&quot;1722752578.1554023930&quot;,&quot;originating_request_id&quot;:&quot;CAA3:0380:1D9394:2B34BA:5CE7916C&quot;,&quot;originating_url&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/blob/master/run_analysis.R&quot;,&quot;referrer&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment&quot;,&quot;user_id&quot;:49216212}}" data-hydro-click-hmac="247f4416346430258028ee8a1968ca2e72324f9ebfe90086d08cdb3be22f7b73" data-ga-click="Repository, click Watch settings, action:blob#show">          <span data-menu-button>
               <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
               Watch
           </span>
@@ -726,18 +726,18 @@
 
   <li>
       <div class="js-toggler-container js-social-container starring-container ">
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="IAHSHWEC7dWdCOq5RaEMP9j6LqhmjzmN7DGPAMwZD7wGYU4KN5KBFwmxV1XBFvbb4ahvHlfHs0x/WrQaxlh4SQ==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="8FSIchjsw3CsE4GhNtgVrWYRNK0J6d70GYOU+uHmzfDWNBRlTnyvsjiqPE2yb+9JX0N1GzihVDWK6K/g66e6BQ==" />
       <input type="hidden" name="context" value="repository"></input>
-      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:59238098,&quot;client_id&quot;:&quot;1722752578.1554023930&quot;,&quot;originating_request_id&quot;:&quot;CAA3:0380:1D949E:2B3D86:5CE79191&quot;,&quot;originating_url&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/blob/master/README.md&quot;,&quot;referrer&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment&quot;,&quot;user_id&quot;:49216212}}" data-hydro-click-hmac="e2dd9804de775929417cd077154c2e02ec1400f67ea4e9ed853dd7afb41762d0" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:59238098,&quot;client_id&quot;:&quot;1722752578.1554023930&quot;,&quot;originating_request_id&quot;:&quot;CAA3:0380:1D9394:2B34BA:5CE7916C&quot;,&quot;originating_url&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/blob/master/run_analysis.R&quot;,&quot;referrer&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment&quot;,&quot;user_id&quot;:49216212}}" data-hydro-click-hmac="866115101b018724f91df9fd651fa9c1646514264a4d3caa3eb2367abfcd3655" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
         Unstar
 </button>        <a class="social-count js-social-count" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/stargazers"
            aria-label="1 user starred this repository">
           1
         </a>
 </form>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="xFTOmCeAWV6NYuSiXgfT52NilOfXzfb+h0hsB4CYKMxz/ZWLahsVWLu5Yt+IVOKYObrplLOYk/RLuSnST5GZXw==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="MACrKcbLQviPSK79hqhfNjWOZYYjCv6E8gHPnqSJ7niHqfA6i1AO/rmTKIBQ+25Jb1YY9Udfm44+8IpLa4Bf6w==" />
       <input type="hidden" name="context" value="repository"></input>
-      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Star gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:59238098,&quot;client_id&quot;:&quot;1722752578.1554023930&quot;,&quot;originating_request_id&quot;:&quot;CAA3:0380:1D949E:2B3D86:5CE79191&quot;,&quot;originating_url&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/blob/master/README.md&quot;,&quot;referrer&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment&quot;,&quot;user_id&quot;:49216212}}" data-hydro-click-hmac="412df7d757261b50af011f8adbb7a7e463b165cf939d14357f1ccfe15c4206e5" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Star gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:59238098,&quot;client_id&quot;:&quot;1722752578.1554023930&quot;,&quot;originating_request_id&quot;:&quot;CAA3:0380:1D9394:2B34BA:5CE7916C&quot;,&quot;originating_url&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/blob/master/run_analysis.R&quot;,&quot;referrer&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment&quot;,&quot;user_id&quot;:49216212}}" data-hydro-click-hmac="0e495ff1a1e50d4169c7c4f56c9f2824e226f4d6786b5db9eccea4ff47c3aa39" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
         Star
 </button>        <a class="social-count js-social-count" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/stargazers"
            aria-label="1 user starred this repository">
@@ -748,8 +748,8 @@
   </li>
 
   <li>
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="btn-with-count" action="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/fork" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="L5ar826PFA0SvsN4VvXKNmltTtW02NO9Au4pIIuqD0292nWWu2I6waVrKWOl3Facc74E9zqnNt6+HeG56vM+RA==" />
-            <button class="btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FORK_BUTTON&quot;,&quot;repository_id&quot;:59238098,&quot;client_id&quot;:&quot;1722752578.1554023930&quot;,&quot;originating_request_id&quot;:&quot;CAA3:0380:1D949E:2B3D86:5CE79191&quot;,&quot;originating_url&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/blob/master/README.md&quot;,&quot;referrer&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment&quot;,&quot;user_id&quot;:49216212}}" data-hydro-click-hmac="19f26eedb67ef49f9176ca87ecf547a33ea80227c7e49d4a832bea95089d3474" data-ga-click="Repository, show fork modal, action:blob#show; text:Fork" type="submit" title="Fork your own copy of gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment to your account" aria-label="Fork your own copy of gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment to your account">              <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="btn-with-count" action="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/fork" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="qQsGRNdCd0O9vCxeuyEXDr1QbOCJ1Bct3Lpqc7gtA0I7R9ghAq9ZjwppxkVICIukp4Mmwger8k5gSaLq2XQySw==" />
+            <button class="btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FORK_BUTTON&quot;,&quot;repository_id&quot;:59238098,&quot;client_id&quot;:&quot;1722752578.1554023930&quot;,&quot;originating_request_id&quot;:&quot;CAA3:0380:1D9394:2B34BA:5CE7916C&quot;,&quot;originating_url&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/blob/master/run_analysis.R&quot;,&quot;referrer&quot;:&quot;https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment&quot;,&quot;user_id&quot;:49216212}}" data-hydro-click-hmac="7fa07e4439054b3aa3792dfef207294215b0b1586ad2a2f908b2b91cff04309a" data-ga-click="Repository, show fork modal, action:blob#show; text:Fork" type="submit" title="Fork your own copy of gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment to your account" aria-label="Fork your own copy of gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment to your account">              <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
               Fork
 </button></form>
     <a href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/network/members" class="social-count"
@@ -889,9 +889,9 @@
 
 
   
-    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/blob/ee045c589cf1d632981c847cdedc1c95b5492a15/README.md">Permalink</a>
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/blob/ee045c589cf1d632981c847cdedc1c95b5492a15/run_analysis.R">Permalink</a>
 
-    <!-- blob contrib key: blob_contributors:v21:53d031a3ac9828401431b580b27f566c -->
+    <!-- blob contrib key: blob_contributors:v21:72cc4dcb41a1f5517b01b0f12fd82194 -->
       
 
     <div class="d-flex flex-items-start mb-3 flex-column flex-md-row">
@@ -906,7 +906,7 @@
     <span class="css-truncate-target">master</span>
   </summary>
 
-  <details-menu class="select-menu-modal hx_rsm-modal position-absolute" style="z-index: 99;" src="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/ref-list/master/README.md?source_action=show&amp;source_controller=blob" preload>
+  <details-menu class="select-menu-modal hx_rsm-modal position-absolute" style="z-index: 99;" src="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/ref-list/master/run_analysis.R?source_action=show&amp;source_controller=blob" preload>
     <include-fragment class="select-menu-loading-overlay anim-pulse">
       <svg height="32" class="octicon octicon-octoface" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"/></svg>
     </include-fragment>
@@ -920,13 +920,13 @@
                 data-hotkey="t">
             Find file
           </a>
-          <clipboard-copy value="README.md" class="btn btn-sm BtnGroup-item">
+          <clipboard-copy value="run_analysis.R" class="btn btn-sm BtnGroup-item">
             Copy path
           </clipboard-copy>
         </div>
       </span>
       <h2 id="blob-path" class="breadcrumb flex-auto min-width-0 text-normal flex-md-self-center ml-md-2 mr-md-3 my-2 my-md-0">
-        <span class="js-repo-root text-bold"><span class="js-path-segment"><a data-pjax="true" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment"><span>Getting-and-Cleaning-Data-Week-4-Assignment</span></a></span></span><span class="separator">/</span><strong class="final-path">README.md</strong>
+        <span class="js-repo-root text-bold"><span class="js-path-segment"><a data-pjax="true" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment"><span>Getting-and-Cleaning-Data-Week-4-Assignment</span></a></span></span><span class="separator">/</span><strong class="final-path">run_analysis.R</strong>
       </h2>
 
       <div class="BtnGroup flex-shrink-0 d-none d-md-inline-block">
@@ -936,7 +936,7 @@
               data-hotkey="t">
           Find file
         </a>
-        <clipboard-copy value="README.md" class="btn btn-sm BtnGroup-item">
+        <clipboard-copy value="run_analysis.R" class="btn btn-sm BtnGroup-item">
           Copy path
         </clipboard-copy>
       </div>
@@ -951,12 +951,12 @@
           <a rel="author" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=11233834" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/gangxu79"><img class="avatar" src="https://avatars2.githubusercontent.com/u/11233834?s=40&amp;v=4" width="20" height="20" alt="@gangxu79" /></a>
           <a class="text-bold link-gray-dark lh-default v-align-middle" rel="author" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=11233834" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/gangxu79">gangxu79</a>
             <span class="lh-default v-align-middle">
-              <a data-pjax="true" title="Update README.md" class="link-gray" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/commit/8e7e55ec197c7b9cb4366271b0df4986d193c8dc">Update README.md</a>
+              <a data-pjax="true" title="Update run_analysis.R" class="link-gray" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/commit/33f902c5e11211346858a2da19cdf2d1537f91e7">Update run_analysis.R</a>
             </span>
         </span>
         <span class="d-inline-block flex-shrink-0 v-align-bottom f6 mt-2 mt-md-0">
-          <a class="pr-2 text-mono link-gray" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/commit/8e7e55ec197c7b9cb4366271b0df4986d193c8dc" data-pjax>8e7e55e</a>
-          <relative-time datetime="2016-05-22T19:38:45Z">May 22, 2016</relative-time>
+          <a class="pr-2 text-mono link-gray" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/commit/33f902c5e11211346858a2da19cdf2d1537f91e7" data-pjax>33f902c</a>
+          <relative-time datetime="2016-05-22T19:10:04Z">May 22, 2016</relative-time>
         </span>
       </div>
 
@@ -968,7 +968,7 @@
         <details-dialog
           class="Box Box--overlay d-flex flex-column anim-fade-in fast"
           aria-label="Users who have contributed to this file"
-          src="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/contributors/master/README.md/list" preload>
+          src="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/contributors/master/run_analysis.R/list" preload>
           <div class="Box-header">
             <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog>
               <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
@@ -993,35 +993,35 @@
 <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
 
   <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-      32 lines (25 sloc)
+      42 lines (32 sloc)
       <span class="file-info-divider"></span>
-    1.92 KB
+    1.74 KB
   </div>
 
   <div class="d-flex py-1 py-md-0 flex-auto flex-order-1 flex-md-order-2 flex-sm-grow-0 flex-justify-between">
 
     <div class="BtnGroup">
-      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/raw/master/README.md">Raw</a>
-        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/blame/master/README.md">Blame</a>
-      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/commits/master/README.md">History</a>
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/raw/master/run_analysis.R">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/blame/master/run_analysis.R">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/commits/master/run_analysis.R">History</a>
     </div>
 
 
     <div>
             <a class="btn-octicon tooltipped tooltipped-nw hide-sm"
-               href="x-github-client://openRepo/https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment?branch=master&amp;filepath=README.md"
+               href="x-github-client://openRepo/https://github.com/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment?branch=master&amp;filepath=run_analysis.R"
                aria-label="Open this file in GitHub Desktop"
                data-ga-click="Repository, open with desktop, type:windows">
                 <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
             </a>
 
-            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/edit/master/README.md" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="OqV71AzakzXxuUck1BcDJzi5HsblEM97npXcp6jnTCr57d0BwfwQQRnxE4KhzFUnq2NtSbxIyrGZdJSmB6opRw==" />
+            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/edit/master/run_analysis.R" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="IFLByysz9iHkXU0I6lK+5opU/YJNyXAq7gOmwExpeh5/PwaAig31Gn/UxbwsYKIG78OtknVdPZsGMAnSgPjL0g==" />
               <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
                 aria-label="Fork this project and edit the file" data-hotkey="e" data-disable-with>
                 <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"/></svg>
               </button>
 </form>
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/delete/master/README.md" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="nzOxqXX9eAKGgiBmmihiWNY8Hqy8hP9zMcEAGl22kUF7/5rR714Jd1eRlMtLC/qUAD9u4I+m+h47HZ41LuYHRw==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/delete/master/run_analysis.R" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="y2aIzH7PjAArD48PfozMHScleyKICLH3eAcA49UA6E7i20qOub/p7pyEvv+e9hx01Hyynsz0LdRCSeShVe6FEA==" />
             <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
               aria-label="Fork this project and delete the file" data-disable-with>
               <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
@@ -1031,37 +1031,199 @@
 </div>
 
       
-  <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-    <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1><a id="user-content-getting-and-cleaning-data-week-4-assignment" class="anchor" aria-hidden="true" href="#getting-and-cleaning-data-week-4-assignment"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting-and-Cleaning-Data-Week-4-Assignment</h1>
-<p>This repo was created to finish the assignment for week 4 of Getting and Cleaning Data Coursera course.</p>
-<ul>
-<li>First, download and unzip the data file into your R working directory.</li>
-<li>Second, download the R source code into your R working directory.</li>
-<li>Finally, execute R source code to generate tidy data file.</li>
-</ul>
-<h3><a id="user-content-data-description" class="anchor" aria-hidden="true" href="#data-description"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data description</h3>
-<p>The variables in the data X are sensor signals measured with waist-mounted smartphone from 30 subjects. The variable in the data Y indicates activity type the subjects performed during recording.</p>
-<h3><a id="user-content-code-explaination" class="anchor" aria-hidden="true" href="#code-explaination"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code explaination</h3>
-<p>The code combined training dataset and test dataset,  and extracted partial variables to create another dataset with the averages of each variable for each activity.</p>
-<h3><a id="user-content-new-dataset" class="anchor" aria-hidden="true" href="#new-dataset"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>New dataset</h3>
-<p>The new generated dataset contained variables calculated based on the mean and standard deviation. Each row of the dataset is an average of each activity type for all subjects.</p>
-<h3><a id="user-content-the-code-was-written-based-on-the-instruction-of-this-assignment" class="anchor" aria-hidden="true" href="#the-code-was-written-based-on-the-instruction-of-this-assignment"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The code was written based on the instruction of this assignment</h3>
-<p>Read training and test dataset into R environment.
-Read variable names into R envrionment.
-Read subject index into R environment.</p>
-<ol>
-<li>Merges the training and the test sets to create one data set.
-Use command rbind to combine training and test set</li>
-<li>Extracts only the measurements on the mean and standard deviation for each measurement.
-Use grep command to get column indexes for variable name contains "mean()" or "std()"</li>
-<li>Uses descriptive activity names to name the activities in the data set
-Convert activity labels to characters and add a new column as factor</li>
-<li>Appropriately labels the data set with descriptive variable names.
-Give the selected descriptive names to variable columns</li>
-<li>From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-Use pipeline command to create a new tidy dataset with command group_by and summarize_each in dplyr package</li>
-</ol>
-</article>
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-r ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tr>
+        <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line">library(<span class="pl-smi">dplyr</span>)</td>
+      </tr>
+      <tr>
+        <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="LC2" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> read train data</span></td>
+      </tr>
+      <tr>
+        <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">X_train</span> <span class="pl-k">&lt;-</span> read.table(<span class="pl-s"><span class="pl-pds">&quot;</span>./UCI HAR Dataset/train/X_train.txt<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">Y_train</span> <span class="pl-k">&lt;-</span> read.table(<span class="pl-s"><span class="pl-pds">&quot;</span>./UCI HAR Dataset/train/Y_train.txt<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">Sub_train</span> <span class="pl-k">&lt;-</span> read.table(<span class="pl-s"><span class="pl-pds">&quot;</span>./UCI HAR Dataset/train/subject_train.txt<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="LC7" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> read test data</span></td>
+      </tr>
+      <tr>
+        <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">X_test</span> <span class="pl-k">&lt;-</span> read.table(<span class="pl-s"><span class="pl-pds">&quot;</span>./UCI HAR Dataset/test/X_test.txt<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="LC10" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">Y_test</span> <span class="pl-k">&lt;-</span> read.table(<span class="pl-s"><span class="pl-pds">&quot;</span>./UCI HAR Dataset/test/Y_test.txt<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="LC11" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">Sub_test</span> <span class="pl-k">&lt;-</span> read.table(<span class="pl-s"><span class="pl-pds">&quot;</span>./UCI HAR Dataset/test/subject_test.txt<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="LC12" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="LC13" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> read data description</span></td>
+      </tr>
+      <tr>
+        <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="LC14" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">variable_names</span> <span class="pl-k">&lt;-</span> read.table(<span class="pl-s"><span class="pl-pds">&quot;</span>./UCI HAR Dataset/features.txt<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="LC15" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="LC16" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> read activity labels</span></td>
+      </tr>
+      <tr>
+        <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="LC17" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">activity_labels</span> <span class="pl-k">&lt;-</span> read.table(<span class="pl-s"><span class="pl-pds">&quot;</span>./UCI HAR Dataset/activity_labels.txt<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="LC18" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="LC19" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> 1. Merges the training and the test sets to create one data set.</span></td>
+      </tr>
+      <tr>
+        <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="LC20" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">X_total</span> <span class="pl-k">&lt;-</span> rbind(<span class="pl-smi">X_train</span>, <span class="pl-smi">X_test</span>)</td>
+      </tr>
+      <tr>
+        <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="LC21" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">Y_total</span> <span class="pl-k">&lt;-</span> rbind(<span class="pl-smi">Y_train</span>, <span class="pl-smi">Y_test</span>)</td>
+      </tr>
+      <tr>
+        <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="LC22" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">Sub_total</span> <span class="pl-k">&lt;-</span> rbind(<span class="pl-smi">Sub_train</span>, <span class="pl-smi">Sub_test</span>)</td>
+      </tr>
+      <tr>
+        <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="LC23" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
+        <td id="LC24" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> 2. Extracts only the measurements on the mean and standard deviation for each measurement.</span></td>
+      </tr>
+      <tr>
+        <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="LC25" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">selected_var</span> <span class="pl-k">&lt;-</span> <span class="pl-smi">variable_names</span>[grep(<span class="pl-s"><span class="pl-pds">&quot;</span>mean<span class="pl-cce">\\</span>(<span class="pl-cce">\\</span>)|std<span class="pl-cce">\\</span>(<span class="pl-cce">\\</span>)<span class="pl-pds">&quot;</span></span>,<span class="pl-smi">variable_names</span>[,<span class="pl-c1">2</span>]),]</td>
+      </tr>
+      <tr>
+        <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
+        <td id="LC26" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">X_total</span> <span class="pl-k">&lt;-</span> <span class="pl-smi">X_total</span>[,<span class="pl-smi">selected_var</span>[,<span class="pl-c1">1</span>]]</td>
+      </tr>
+      <tr>
+        <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
+        <td id="LC27" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
+        <td id="LC28" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> 3. Uses descriptive activity names to name the activities in the data set</span></td>
+      </tr>
+      <tr>
+        <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
+        <td id="LC29" class="blob-code blob-code-inner js-file-line">colnames(<span class="pl-smi">Y_total</span>) <span class="pl-k">&lt;-</span> <span class="pl-s"><span class="pl-pds">&quot;</span>activity<span class="pl-pds">&quot;</span></span></td>
+      </tr>
+      <tr>
+        <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
+        <td id="LC30" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">Y_total</span><span class="pl-k">$</span><span class="pl-smi">activitylabel</span> <span class="pl-k">&lt;-</span> <span class="pl-k">factor</span>(<span class="pl-smi">Y_total</span><span class="pl-k">$</span><span class="pl-smi">activity</span>, <span class="pl-v">labels</span> <span class="pl-k">=</span> as.character(<span class="pl-smi">activity_labels</span>[,<span class="pl-c1">2</span>]))</td>
+      </tr>
+      <tr>
+        <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
+        <td id="LC31" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">activitylabel</span> <span class="pl-k">&lt;-</span> <span class="pl-smi">Y_total</span>[,<span class="pl-k">-</span><span class="pl-c1">1</span>]</td>
+      </tr>
+      <tr>
+        <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
+        <td id="LC32" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
+        <td id="LC33" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> 4. Appropriately labels the data set with descriptive variable names.</span></td>
+      </tr>
+      <tr>
+        <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
+        <td id="LC34" class="blob-code blob-code-inner js-file-line">colnames(<span class="pl-smi">X_total</span>) <span class="pl-k">&lt;-</span> <span class="pl-smi">variable_names</span>[<span class="pl-smi">selected_var</span>[,<span class="pl-c1">1</span>],<span class="pl-c1">2</span>]</td>
+      </tr>
+      <tr>
+        <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
+        <td id="LC35" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
+        <td id="LC36" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> 5. From the data set in step 4, creates a second, independent tidy data set with the average</span></td>
+      </tr>
+      <tr>
+        <td id="L37" class="blob-num js-line-number" data-line-number="37"></td>
+        <td id="LC37" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> of each variable for each activity and each subject.</span></td>
+      </tr>
+      <tr>
+        <td id="L38" class="blob-num js-line-number" data-line-number="38"></td>
+        <td id="LC38" class="blob-code blob-code-inner js-file-line">colnames(<span class="pl-smi">Sub_total</span>) <span class="pl-k">&lt;-</span> <span class="pl-s"><span class="pl-pds">&quot;</span>subject<span class="pl-pds">&quot;</span></span></td>
+      </tr>
+      <tr>
+        <td id="L39" class="blob-num js-line-number" data-line-number="39"></td>
+        <td id="LC39" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">total</span> <span class="pl-k">&lt;-</span> cbind(<span class="pl-smi">X_total</span>, <span class="pl-smi">activitylabel</span>, <span class="pl-smi">Sub_total</span>)</td>
+      </tr>
+      <tr>
+        <td id="L40" class="blob-num js-line-number" data-line-number="40"></td>
+        <td id="LC40" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">total_mean</span> <span class="pl-k">&lt;-</span> <span class="pl-smi">total</span> %<span class="pl-k">&gt;</span>% group_by(<span class="pl-smi">activitylabel</span>, <span class="pl-smi">subject</span>) %<span class="pl-k">&gt;</span>% summarize_each(funs(<span class="pl-smi">mean</span>))</td>
+      </tr>
+      <tr>
+        <td id="L41" class="blob-num js-line-number" data-line-number="41"></td>
+        <td id="LC41" class="blob-code blob-code-inner js-file-line">write.table(<span class="pl-smi">total_mean</span>, <span class="pl-v">file</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>./UCI HAR Dataset/tidydata.txt<span class="pl-pds">&quot;</span></span>, <span class="pl-v">row.names</span> <span class="pl-k">=</span> <span class="pl-c1">FALSE</span>, <span class="pl-v">col.names</span> <span class="pl-k">=</span> <span class="pl-c1">TRUE</span>)</td>
+      </tr>
+</table>
+
+  <details class="details-reset details-overlay BlobToolbar position-absolute js-file-line-actions dropdown d-none" aria-hidden="true">
+    <summary class="btn-octicon ml-0 px-2 p-0 bg-white border border-gray-dark rounded-1" aria-label="Inline file action toolbar">
+      <svg class="octicon octicon-kebab-horizontal" viewBox="0 0 13 16" version="1.1" width="13" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM13 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></svg>
+    </summary>
+    <details-menu>
+      <ul class="BlobToolbar-dropdown dropdown-menu dropdown-menu-se mt-2" style="width:185px">
+        <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-lines" style="cursor:pointer;" data-original-text="Copy lines">Copy lines</clipboard-copy></li>
+        <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-permalink" style="cursor:pointer;" data-original-text="Copy permalink">Copy permalink</clipboard-copy></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/blame/ee045c589cf1d632981c847cdedc1c95b5492a15/run_analysis.R">View git blame</a></li>
+          <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/gangxu79/Getting-and-Cleaning-Data-Week-4-Assignment/issues/new">Reference in new issue</a></li>
+      </ul>
+    </details-menu>
+  </details>
+
   </div>
 
     </div>
@@ -1093,7 +1255,7 @@ Use pipeline command to create a new tidy dataset with command group_by and summ
 <div class="footer container-lg width-full p-responsive" role="contentinfo">
   <div class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
     <ul class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
-      <li class="mr-3 mr-lg-0">&copy; 2019 <span title="0.34275s from unicorn-57bc9f446f-mxjhn">GitHub</span>, Inc.</li>
+      <li class="mr-3 mr-lg-0">&copy; 2019 <span title="0.30053s from unicorn-f7596fcc9-jgn5p">GitHub</span>, Inc.</li>
         <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
         <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
         <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to security, text:security" href="https://github.com/security">Security</a></li>
